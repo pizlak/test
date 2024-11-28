@@ -1,0 +1,21 @@
+{
+    "name": "kostya/www",
+    "description": "test",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "pizlac",
+            "email": "baldesovlizka97@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.7"
+    }
+}
