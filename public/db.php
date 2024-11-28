@@ -1,14 +1,11 @@
 <?php
-$hostName = "localhost";
-$userName = "root";
-$password = "mysql";
-$database = "test";
+require_once __DIR__ . "/../app/config.php";
 
-$conn = new mysqli($hostName, $userName, $password);
-$conn->query("CREATE DATABASE IF NOT EXISTS $database");
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD);
+$conn->query("CREATE DATABASE IF NOT EXISTS " . DB_NAME);
 $conn->close();
 
-$conn = new mysqli($hostName, $userName, $password, $database);
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 $conn->query("CREATE TABLE IF NOT EXISTS users (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `user_name` VARCHAR(255) NOT NULL,
